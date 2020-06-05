@@ -18,7 +18,7 @@ update() {
 }
 
 scan() {
- nmap -$MODE -sV -Pn $ADDRESS --script=vulners/vulners.nse -p$PORTS -oX $OUTPUT/$(date "+%Y.%m.%d-%H.%M").xml
+ nmap -$MODE -sV -Pn -iL $ADDRESS --script=vulners/vulners.nse -p$PORTS -oX $OUTPUT/$(date "+%Y.%m.%d-%H.%M").xml
 }
 
 help() {
